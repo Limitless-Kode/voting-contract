@@ -1,5 +1,5 @@
-const Escrow = artifacts.require("Escrow");
+const Voting = artifacts.require("Voting");
 
 module.exports = function(deployer) {
-  deployer.deploy(Escrow);
+  deployer.deploy(Voting);
 };
