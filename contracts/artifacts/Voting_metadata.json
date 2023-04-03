@@ -1,0 +1,273 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "msg",
+						"type": "string"
+					}
+				],
+				"name": "AlreadyVotedError",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "voters",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "voteType",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "topicId",
+						"type": "uint256"
+					}
+				],
+				"name": "VoteCast",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_topicId",
+						"type": "uint256"
+					}
+				],
+				"name": "closeVoting",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_topic",
+						"type": "string"
+					}
+				],
+				"name": "createTopic",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "creator",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_topicId",
+						"type": "uint256"
+					}
+				],
+				"name": "getAcceptedVotesByTopicId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_topicId",
+						"type": "uint256"
+					}
+				],
+				"name": "getMetadata",
+				"outputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "uint256",
+										"name": "id",
+										"type": "uint256"
+									},
+									{
+										"internalType": "string",
+										"name": "topic",
+										"type": "string"
+									}
+								],
+								"internalType": "struct Voting.Topic",
+								"name": "topic",
+								"type": "tuple"
+							},
+							{
+								"internalType": "uint256",
+								"name": "accepted",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "rejected",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isOpen",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Voting.VoteMetadata",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_topicId",
+						"type": "uint256"
+					}
+				],
+				"name": "getRejectedVotesByTopicId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_topicId",
+						"type": "uint256"
+					}
+				],
+				"name": "getTopicApproval",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "numberOfVoters",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_voteType",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_topicId",
+						"type": "uint256"
+					}
+				],
+				"name": "vote",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Voting.sol": "Voting"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Voting.sol": {
+			"keccak256": "0x660c5c03f9302aa3a2a2420887129d945b2c531efacfd3f8cd8a9c0a5979333a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c29b5a2bdade9e95776aef580585a4c2463fc2e18c862633d31df8163339da4d",
+				"dweb:/ipfs/QmWGRTWeEUJUToBuquZGkQQHnQAYAHGzCXrQtD358c68wj"
+			]
+		}
+	},
+	"version": 1
+}
